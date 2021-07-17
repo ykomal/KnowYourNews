@@ -20,7 +20,7 @@ const Popup = () => {
 
   return (
     <div>
-        <Card className="cardBody" style={{ width: '18rem' }}>
+        <Card className="cardBody">
           <Card.Body>
             <Card.Title className="heading"> <i className="far fa-newspaper"></i> KNOW YOUR NEWS <i className="fas fa-search"></i></Card.Title>
             <PieChart newsViews={state.newsViews} socialMediaViews={state.socialMediaViews} miscViews={state.miscViews} type={state.type} />

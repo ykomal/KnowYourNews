@@ -72,19 +72,14 @@ chrome.tabs.onActivated.addListener(() => {
   }, 500); 
 });
 
+chrome.idle.setDetectionInterval(2 * 60); // 2 mins inactivity
+
 chrome.idle.onStateChanged.addListener((newState) => {
   setTimeout(() => {
     console.log("new state : " + newState);
     if (newState !== 'active') {
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
-      console.log("Hello");
+      const websiteActions = new WebsiteActions('testUrl');
+      websiteActions.RemoveActiveTab();
     }
   }, 500); 
 })

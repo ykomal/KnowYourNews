@@ -32,7 +32,7 @@ class Report extends React.Component<Props, any> {
         "noOfTimesVisited": "NO Of TIMES VISITED",
         "firstVisitDate": "FIRST VISIT DATE (yyyy-mm-dd)",
         "lastVisitDate": "LAST VISIT DATE (yyyy-mm-dd)",
-        "totalTimeSpent": "TOTAL TIME SPENT"
+        "totalTimeSpent": "TOTAL TIME SPENT (hours:minutes:seconds)"
       },
       style = {
         padding: "5px"

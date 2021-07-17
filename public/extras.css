@@ -9,7 +9,7 @@ p {
 font-size: 10px;
 margin-top: 0;
 margin-bottom: 0px;
-padding-left: 10px;
+padding-left: 12px;
 display: block;
 color: #ffffff;
 }
@@ -25,14 +25,13 @@ font-size: 20px;
 
 .links {
 float: right;
-padding-left: 3px;
-font-size: 21px;
+padding-left: 10px;
 }
 
 .linkText {
   float: right;
   text-align: right;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   padding-left: 3px;
   padding-top: 5px;
@@ -48,7 +47,8 @@ font-size: 21px;
 
 .linksWithTexts {
   top: 9px;
-  left: 100px;
+  left: 120px;
+  padding-top: 30px;
   position: relative;
   text-align: right;
   font-size: 20px;
@@ -71,11 +71,13 @@ background-color: RoyalBlue;
 
 .cardBody, .pieChartBody {
 background-color: black;
+width : 100%;
 }
 
 .heading {
-font-weight: bold;
-color: red;
+  text-align : center;
+  font-weight: bold;
+  color: red;
 }
 
 i {
@@ -197,4 +199,8 @@ display: inline-block;
 }
 .downloadButton:hover {
   box-shadow: 2px 2px 10px #16a085;
+}
+
+#root {
+  width: 400px;
 }

@@ -76,6 +76,17 @@ export const getInitialActiveTabData = (url: string, type: WebsiteType): ActiveT
   };
 }
 
+export const calculateTotalTime = (time: number): string => {
+  var hoursDifference = Math.floor(time/1000/60/60);
+  time -= hoursDifference*1000*60*60
+
+  var minutesDifference = Math.floor(time/1000/60);
+  time -= minutesDifference*1000*60
+
+  var secondsDifference = Math.floor(time / 1000);
+  return hoursDifference + ':' + minutesDifference + ':' + secondsDifference;
+}
+
 export const getStorageData = (key: WebsiteType) =>
   new Promise((resolve, reject) =>
     chrome.storage.sync.get(key, result => {

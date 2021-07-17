@@ -65,6 +65,7 @@ class PieChart extends React.Component<Props, any> {
           noOfTimesVisited: val.noOfTimesVisited,
 					firstVisitDate: val.firstVisitDate,
   				lastVisitDate: val.lastVisitDate,
+					totalTimeSpent: Website.calculateTotalTime(val.totalTimeSpent)
         };
 
 				if(this.compareDate(val.firstVisitDate, this.state.oldestLog) === 2){
@@ -100,8 +101,8 @@ class PieChart extends React.Component<Props, any> {
 			<div id="chart" className="pieChartBody">
 				<Chart
 					style={{ fill: "black" }}
-					width={'250px'}
-					height={'250px'}
+					width={'350px'}
+					height={'300px'}
 					chartType="PieChart"
 					loader={<div>Loading Chart</div>}
 					data={this.state.websiteData}
@@ -126,10 +127,10 @@ class PieChart extends React.Component<Props, any> {
 					</div>
 				</div>
 				<div className = "rightElements">
-					<Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-github" />
-        	<Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-twitter" />
-          <Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-discord" />
-          <Links link = "https://fontawesome.com/v5.15/icons/github" icon="fas fa-envelope" />
+					<Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-github fa-2x" />
+        	<Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-twitter fa-2x" />
+          <Links link = "https://fontawesome.com/v5.15/icons/github" icon="fab fa-discord fa-2x" />
+          <Links link = "https://fontawesome.com/v5.15/icons/github" icon="fas fa-envelope fa-2x" />
           <div className="linksWithTexts">
 						<a href="https://fontawesome.com/v5.15/icons/github" target="_blank">
 							<i className="fab fa-neos notionIcon"></i>

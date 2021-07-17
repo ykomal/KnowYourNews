@@ -58,14 +58,11 @@ export class WebsiteActions {
       else {
         this.getIndexOf(value, activeTabData.url, activeTabData.startTime);
       }
-      console.log(newsDataJson);
       Website.setStorageData({ [activeTabData.type]: value });
     });
   }
 
   public AddActiveTab(url: string, type: Website.WebsiteType) {
-    console.log("Hello In active");
-    console.log("In active tab + " + url);
 
     Website.getStorageData(Website.WebsiteType.ActiveTab).then((value: Website.ActiveTabData) => {
       console.log(value);
@@ -81,14 +78,14 @@ export class WebsiteActions {
   }
 
   public RemoveActiveTab() {
-    console.log("Hello In active");
 
     Website.getStorageData(Website.WebsiteType.ActiveTab).then((value: Website.ActiveTabData) => {
       console.log(value);
       if (value.type !== Website.WebsiteType.Misc) {
+        value.startTime += 2 * 60 * 1000; // adding 2 mins of inactivity time
         this.AddWebsite(value);
       }
-      
+
       Website.setStorageData({ [Website.WebsiteType.ActiveTab]: {} });
     }).catch(() => {
       console.log("error active");
