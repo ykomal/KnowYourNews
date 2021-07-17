@@ -1,5 +1,5 @@
-# requests-modifier
-Chrome extension to redirect requests to another url
+# Know Your News
+Chrome extension to give you a summary of the websites 
 
 # Init
 ```
