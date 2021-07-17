@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "Know your news",
+  "description": "To understand the time spent consuming news!",
+  "version": "1.0",
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "browser_action": {
+    "default_icon": "icon-red.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["js/vendor.js", "js/background.js"],
+    "matches": ["https://www.gstatic.com/charts/loader.js"]
+  },
+
+  "permissions": [
+    "storage",
+    "idle",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "https://www.gstatic.com/charts/loader.js"
+  ],
+  "icons": {
+    "128": "icon-red.png"
+  },
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/charts/loader.js https://www.gstatic.com/charts/51/js/jsapi_compiled_ui_module.js https://www.gstatic.com/charts/51/js/jsapi_compiled_corechart_module.js https://www.gstatic.com/charts/51/js/jsapi_compiled_controls_module.js https://www.gstatic.com/charts/51/js/jsapi_compiled_graphics_module.js https://www.gstatic.com/charts/51/js/jsapi_compiled_default_module.js https://www.gstatic.com/charts/51/loader.js https://www.google.com/jsapi; object-src 'self'"
+}
